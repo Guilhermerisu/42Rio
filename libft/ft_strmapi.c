@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	indice;
+	unsigned int	index;
 	unsigned int	length;
 	char			*str;
 
@@ -22,11 +22,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str = (char *)ft_calloc(length + 1, sizeof(char));
 	if (!str)
 		return (0);
-	indice = 0;
-	while (s[indice] != '\0')
+	index = 0;
+	while (s[index] != '\0')
 	{
-		str[indice] = (*f)(indice, s[indice]);
-		indice++;
+		str[index] = (*f)(index, s[index]);
+		index++;
 	}
 	return (str);
 }

@@ -27,19 +27,19 @@ static int	ft_lensubstring(char const *str, int start, char c)
 
 static int	ft_countsubstring(char const *str, char c)
 {
-	int	indice;
+	int	index;
 	int	count;
 
 	count = 0;
-	indice = 0;
-	while (str[indice] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		while (str[indice] == c && str[indice] != '\0')
-			indice++;
-		if (str[indice])
+		while (str[index] == c && str[index] != '\0')
+			index++;
+		if (str[index])
 			count++;
-		while (str[indice] != c && str[indice])
-			indice++;
+		while (str[index] != c && str[index])
+			index++;
 	}
 	return (count);
 }
@@ -47,7 +47,7 @@ static int	ft_countsubstring(char const *str, char c)
 char	**ft_split(char const *str, char c)
 {
 	int		start;
-	int		indice;
+	int		index;
 	int		sublen;
 	int		subnumber;
 	char	**ptrbox;
@@ -57,15 +57,15 @@ char	**ft_split(char const *str, char c)
 	subnumber = ft_countsubstring(str, c);
 	ptrbox = (char **)ft_calloc((subnumber + 1), sizeof(char *));
 	start = 0;
-	indice = 0;
-	while (indice < subnumber)
+	index = 0;
+	while (index < subnumber)
 	{
 		while (str[start] && str[start] == c)
 			start++;
 		sublen = ft_lensubstring(str, start, c);
-		ptrbox[indice] = ft_substr(str, start, sublen);
+		ptrbox[index] = ft_substr(str, start, sublen);
 		start = start + sublen;
-		indice++;
+		index++;
 	}
 	return (ptrbox);
 }
