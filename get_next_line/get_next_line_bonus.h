@@ -6,7 +6,7 @@
 /*   By: gupiment <gupiment@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:19:00 by gupiment          #+#    #+#             */
-/*   Updated: 2023/11/09 15:19:04 by gupiment         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:48:39 by gupiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <fcntl.h>
 
 char	*ft_strdup(const char *s1);
 int		ft_strchr(char *s, char c);
