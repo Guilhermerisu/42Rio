@@ -16,6 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
 char	*ft_strdup(const char *s1);
 int		ft_strchr(char *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
