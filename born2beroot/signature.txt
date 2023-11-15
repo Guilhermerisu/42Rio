@@ -1,0 +1,1 @@
+ddc2c78328518db34fbf0ed90a8cc4d769d4ae63  debian12.qcow2
